@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://biyh34dtau0bk"]
+
+[ext_resource type="Texture2D" uid="uid://dxa8kyn1tbjmm" path="res://Jump (32x32).png" id="1_lxhxm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vdxmg"]
+height = 31.3333
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, 1.33333)
+scale = Vector2(1.08333, 1.08333)
+texture = ExtResource("1_lxhxm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3.33333)
+shape = SubResource("CapsuleShape2D_vdxmg")
