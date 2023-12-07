@@ -7,6 +7,7 @@ const JUMP_VELOCITY = -900.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var diamond = 0
 
 
 func _physics_process(delta):
@@ -38,5 +39,9 @@ func _physics_process(delta):
 	sprite_2d.flip_h = isLeft
 
 
-
-
+func _on_area_2d_area_entered(area):
+	diamond = diamond + 1
+	print(str(diamond))
+	Global.diamonds = Global.diamonds + 1
+	$Camera2D/Label.text = str(diamond)
+	area.queue_free()
