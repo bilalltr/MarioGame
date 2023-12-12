@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cq3l8issl6roe"]
+
+[ext_resource type="Texture2D" uid="uid://chid42evkwoo1" path="res://Tiles red/tileRed_12.png" id="1_oq563"]
+
+[node name="TileRed12" type="Sprite2D"]
+position = Vector2(286, 361)
+scale = Vector2(0.561538, 0.644068)
+texture = ExtResource("1_oq563")

@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://o85ore8voht4"]
+
+[ext_resource type="Script" path="res://Lost_scene.gd" id="1_g3cpo"]
+[ext_resource type="Script" path="res://Confirmation_Dialog.gd" id="2_24myu"]
+
+[node name="Lost_scene" type="Node2D"]
+script = ExtResource("1_g3cpo")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1034.0
+offset_bottom = 345.0
+theme_override_colors/font_color = Color(0.898039, 0, 0, 1)
+theme_override_font_sizes/font_size = 250
+text = "You Lost"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 484.0
+offset_top = 436.0
+offset_right = 624.0
+offset_bottom = 501.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Exit"
+
+[node name="Restart" type="Button" parent="."]
+offset_left = 243.0
+offset_top = 436.0
+offset_right = 383.0
+offset_bottom = 501.0
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Restart"
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+script = ExtResource("2_24myu")
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]

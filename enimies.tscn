@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://dc54t8dby8j4y"]
+
+[ext_resource type="Script" path="res://enimies.gd" id="1_tuuj8"]
+[ext_resource type="Texture2D" uid="uid://b3gq81h4n6k6j" path="res://tile_0015.png" id="1_xvhfi"]
+[ext_resource type="Texture2D" uid="uid://ctj6y6g1x5254" path="res://tile_0016.png" id="2_fpu7j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xu0vj"]
+atlas = ExtResource("1_xvhfi")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlgnr"]
+atlas = ExtResource("2_fpu7j")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kannm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xu0vj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlgnr")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i2kur"]
+radius = 45.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ih1nn"]
+radius = 49.0
+
+[node name="Enimies" type="CharacterBody2D"]
+script = ExtResource("1_tuuj8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(12.5, -57)
+scale = Vector2(5.04167, 4.75)
+sprite_frames = SubResource("SpriteFrames_kannm")
+animation = &"walking"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10, -40)
+shape = SubResource("CircleShape2D_i2kur")
+
+[node name="Enimie" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enimie"]
+position = Vector2(10, -38)
+shape = SubResource("CircleShape2D_ih1nn")

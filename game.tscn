@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8sxarrswmkr6"]
+[gd_scene load_steps=7 format=3 uid="uid://5lb3no2ky0au"]
 
 [ext_resource type="Shader" path="res://game.gdshader" id="1_5fn2l"]
 [ext_resource type="PackedScene" uid="uid://bomr6cnoenxxb" path="res://main.tscn" id="1_fkghw"]
 [ext_resource type="Script" path="res://game.gd" id="1_wfp22"]
-[ext_resource type="Texture2D" uid="uid://44g40wehtf21" path="res://Tiles blue/tileBlue_10.png" id="4_150fp"]
+[ext_resource type="Texture2D" uid="uid://b57f85kvps6ke" path="res://mouche-removebg-preview.png" id="4_ff6tj"]
+[ext_resource type="Texture2D" uid="uid://chid42evkwoo1" path="res://Tiles red/tileRed_12.png" id="5_tk3ly"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_85mi6"]
 shader = ExtResource("1_5fn2l")
@@ -37,25 +38,43 @@ render_target_update_mode = 4
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Node2D"]
-offset_left = 571.8
-offset_top = 467.845
-offset_right = 726.8
-offset_bottom = 525.845
+[node name="HBoxContainer3" type="HBoxContainer" parent="Node2D"]
+offset_left = 503.245
+offset_top = 453.875
+offset_right = 741.245
+offset_bottom = 511.875
 
-[node name="TextureRect" type="TextureRect" parent="Node2D/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Node2D/HBoxContainer3"]
 layout_mode = 2
-texture = ExtResource("4_150fp")
-expand_mode = 2
-stretch_mode = 6
 
-[node name="Label" type="Label" parent="Node2D/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Node2D/HBoxContainer3/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_ff6tj")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Node2D/HBoxContainer3/HBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-text = "bilal"
+text = "Diamond"
 horizontal_alignment = 1
 vertical_alignment = 2
 text_overrun_behavior = 2
 tab_stops = PackedFloat32Array(0)
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Node2D/HBoxContainer3"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Node2D/HBoxContainer3/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("5_tk3ly")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Node2D/HBoxContainer3/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "coeur"
