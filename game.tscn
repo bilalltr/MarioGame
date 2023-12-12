@@ -1,31 +1,61 @@
-[gd_scene load_steps=5 format=3 uid="uid://c8sxarrswmkr6"]
+[gd_scene load_steps=6 format=3 uid="uid://c8sxarrswmkr6"]
 
 [ext_resource type="Shader" path="res://game.gdshader" id="1_5fn2l"]
 [ext_resource type="PackedScene" uid="uid://bomr6cnoenxxb" path="res://main.tscn" id="1_fkghw"]
 [ext_resource type="Script" path="res://game.gd" id="1_wfp22"]
+[ext_resource type="Texture2D" uid="uid://44g40wehtf21" path="res://Tiles blue/tileBlue_10.png" id="4_150fp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_85mi6"]
 shader = ExtResource("1_5fn2l")
 shader_parameter/cam_offset = Vector2(0, 0)
 
 [node name="Game" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_wfp22")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 724.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+auto_translate = false
+localize_numeral_system = false
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="HBoxContainer"]
 material = SubResource("ShaderMaterial_85mi6")
-layout_direction = 1
-offset_right = 1255.0
-offset_bottom = 751.0
+layout_mode = 2
+size_flags_horizontal = 3
 mouse_filter = 0
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(1152, 648)
+size = Vector2i(1152, 640)
+size_2d_override_stretch = true
 render_target_update_mode = 4
 
-[node name="Node" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_fkghw")]
+[node name="Node" parent="HBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_fkghw")]
 
-[node name="Label" type="Label" parent="SubViewportContainer"]
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Node2D"]
+offset_left = 571.8
+offset_top = 467.845
+offset_right = 726.8
+offset_bottom = 525.845
+
+[node name="TextureRect" type="TextureRect" parent="Node2D/HBoxContainer"]
 layout_mode = 2
+texture = ExtResource("4_150fp")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="Node2D/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
+text = "bilal"
+horizontal_alignment = 1
+vertical_alignment = 2
+text_overrun_behavior = 2
+tab_stops = PackedFloat32Array(0)
