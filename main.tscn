@@ -575,7 +575,7 @@ position = Vector2(418, 460)
 position = Vector2(659, 160)
 
 [node name="Area2D3" parent="." instance=ExtResource("7_awgri")]
-position = Vector2(803, 155)
+position = Vector2(885, 64)
 
 [node name="Area2D4" parent="." instance=ExtResource("7_awgri")]
 position = Vector2(1118, 329)
