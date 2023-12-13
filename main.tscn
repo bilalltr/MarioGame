@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://bomr6cnoenxxb"]
+[gd_scene load_steps=12 format=3 uid="uid://bomr6cnoenxxb"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_ufjff"]
+[ext_resource type="Texture2D" uid="uid://celc46bleyird" path="res://backGround1.jpg" id="2_2aluj"]
 [ext_resource type="Texture2D" uid="uid://cuuyqyectuasq" path="res://Terrain (16x16).png" id="2_wkbvf"]
 [ext_resource type="PackedScene" uid="uid://dvwa5vra5e3ij" path="res://scenes/main_character.tscn" id="3_pno28"]
 [ext_resource type="PackedScene" uid="uid://cwpwt5vg2jtgy" path="res://2d_scen/rigid_body_2d.tscn" id="4_df1e1"]
@@ -484,6 +485,12 @@ height = 88.0
 
 [node name="Node" type="Node"]
 script = ExtResource("1_ufjff")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+offset_right = 5240.0
+offset_bottom = 777.0
+texture = ExtResource("2_2aluj")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1

@@ -1,40 +1,64 @@
-[gd_scene load_steps=3 format=3 uid="uid://o85ore8voht4"]
+[gd_scene load_steps=4 format=3 uid="uid://b0eajdwv030j7"]
 
 [ext_resource type="Script" path="res://Lost_scene.gd" id="1_g3cpo"]
-[ext_resource type="Script" path="res://Confirmation_Dialog.gd" id="2_24myu"]
+[ext_resource type="Texture2D" uid="uid://celc46bleyird" path="res://backGround1.jpg" id="2_7ficw"]
+[ext_resource type="PackedScene" uid="uid://dvwa5vra5e3ij" path="res://scenes/main_character.tscn" id="3_8tpui"]
 
-[node name="Lost_scene" type="Node2D"]
+[node name="Lost_scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_g3cpo")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 1034.0
-offset_bottom = 345.0
-theme_override_colors/font_color = Color(0.898039, 0, 0, 1)
-theme_override_font_sizes/font_size = 250
-text = "You Lost"
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1189.0
+offset_bottom = 678.0
+texture = ExtResource("2_7ficw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 40
+text = "You lose"
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2
+language = "english"
 
-[node name="Exit" type="Button" parent="."]
-offset_left = 484.0
-offset_top = 436.0
-offset_right = 624.0
-offset_bottom = 501.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Exit"
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
 
-[node name="Restart" type="Button" parent="."]
-offset_left = 243.0
-offset_top = 436.0
-offset_right = 383.0
-offset_bottom = 501.0
-size_flags_vertical = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+[node name="Restart" type="Button" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
 text = "Restart"
 
-[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
-script = ExtResource("2_24myu")
+[node name="Home" type="Button" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Home"
 
-[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[node name="Exit" type="Button" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exite"
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_8tpui")]
+position = Vector2(557, 168)
+
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c8sxarrswmkr6"]
 
 [ext_resource type="Shader" path="res://game.gdshader" id="1_5fn2l"]
-[ext_resource type="PackedScene" path="res://main.tscn" id="1_fkghw"]
+[ext_resource type="PackedScene" uid="uid://bomr6cnoenxxb" path="res://main.tscn" id="1_fkghw"]
 [ext_resource type="Script" path="res://game.gd" id="1_wfp22"]
 [ext_resource type="Texture2D" uid="uid://b57f85kvps6ke" path="res://mouche-removebg-preview.png" id="4_ff6tj"]
 [ext_resource type="Texture2D" uid="uid://chid42evkwoo1" path="res://Tiles red/tileRed_12.png" id="5_tk3ly"]
