@@ -10,5 +10,3 @@ func _physics_process(delta):
 		deirection *= -1
 	velocity = deirection * 250
 	move_and_slide()
-
-

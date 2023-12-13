@@ -524,4 +524,5 @@ position = Vector2(18, 25)
 shape = SubResource("CapsuleShape2D_pm6oy")
 
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

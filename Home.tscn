@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://2e4ucxf1wsj4"]
+
+[ext_resource type="Script" path="res://Home.gd" id="1_ld1fx"]
+[ext_resource type="Texture2D" uid="uid://celc46bleyird" path="res://backGround1.jpg" id="1_oqppf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ld1fx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1164.0
+offset_bottom = 676.0
+texture = ExtResource("1_oqppf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Frog Game"
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 2
+offset_left = 467.031
+offset_top = 392.754
+offset_right = 694.031
+offset_bottom = 468.754
+text = "Play"
+
+[node name="Exite" type="Button" parent="."]
+layout_mode = 2
+offset_left = 467.031
+offset_top = 527.121
+offset_right = 694.031
+offset_bottom = 603.121
+text = "Exit"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Exite" to="." method="_on_exite_pressed"]

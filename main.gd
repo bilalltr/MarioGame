@@ -8,8 +8,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Global.hearts == 0: 
-		get_tree().root.add_child(Global.Lost_scene)
-		get_tree().root.remove_child(get_tree().root.get_child(0))
+		get_tree().change_scene_to_file("res://Lost_scene.tscn")
 
 
 
