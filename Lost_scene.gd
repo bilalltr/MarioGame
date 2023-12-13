@@ -21,3 +21,5 @@ func _on_restart_pressed():
 	Global.diamonds = 0
 	get_tree().root.add_child(preload("res://game.tscn").instantiate())
 	get_tree().root.remove_child(get_tree().root.get_child(0))
+
+
