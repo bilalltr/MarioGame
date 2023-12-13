@@ -1,0 +1,97 @@
+[gd_scene load_steps=14 format=3 uid="uid://d0nomujegl8qw"]
+
+[ext_resource type="Script" path="res://Trofet.gd" id="1_87bq2"]
+[ext_resource type="Texture2D" uid="uid://cft8lesnnr1cs" path="res://End (Pressed) (64x64).png" id="2_w6xrw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1tfh"]
+atlas = ExtResource("2_w6xrw")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1uwla"]
+atlas = ExtResource("2_w6xrw")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uep1"]
+atlas = ExtResource("2_w6xrw")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcpuh"]
+atlas = ExtResource("2_w6xrw")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yfm4"]
+atlas = ExtResource("2_w6xrw")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkxow"]
+atlas = ExtResource("2_w6xrw")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwt8d"]
+atlas = ExtResource("2_w6xrw")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8lqn"]
+atlas = ExtResource("2_w6xrw")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qtgj8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1tfh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1uwla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5uep1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcpuh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yfm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkxow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwt8d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8lqn")
+}],
+"loop": true,
+"name": &"trofet",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qpqg6"]
+radius = 29.0172
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wmpvv"]
+radius = 32.0
+height = 98.0
+
+[node name="Trofet" type="CharacterBody2D"]
+script = ExtResource("1_87bq2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(10.5, 28.5)
+scale = Vector2(1.32813, 1.89063)
+sprite_frames = SubResource("SpriteFrames_qtgj8")
+animation = &"trofet"
+frame_progress = 0.378197
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(17, 27)
+shape = SubResource("CircleShape2D_qpqg6")
+
+[node name="Trofet" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trofet"]
+visible = false
+position = Vector2(11, 44)
+shape = SubResource("CapsuleShape2D_wmpvv")

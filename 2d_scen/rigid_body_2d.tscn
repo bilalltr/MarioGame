@@ -74,7 +74,7 @@ region = Rect2(1024, 0, 64, 64)
 [sub_resource type="SpriteFrames" id="SpriteFrames_wweqw"]
 animations = [{
 "frames": [{
-"duration": 9.0,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_j52xa")
 }, {
 "duration": 1.0,
@@ -128,15 +128,34 @@ animations = [{
 "loop": false,
 "name": &"default",
 "speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j52xa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kv5h6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6bvkl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ryve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynfhs")
+}],
+"loop": true,
+"name": &"flag",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_skh03"]
 size = Vector2(90, 142)
 
-[node name="RigidBody2D" type="RigidBody2D"]
+[node name="Flag" type="CharacterBody2D"]
 light_mask = 0
 collision_layer = 0
-can_sleep = false
 script = ExtResource("1_l88kr")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
@@ -144,8 +163,6 @@ position = Vector2(27, 49.5)
 scale = Vector2(1.84375, 2.54688)
 sprite_frames = SubResource("SpriteFrames_wweqw")
 autoplay = "default"
-frame = 16
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(35, 66)

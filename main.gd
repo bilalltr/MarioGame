@@ -33,3 +33,5 @@ func _on_area_2d_2_area_entered(area):
 		SoundPlayer.play_sound(SoundPlayer.EAT)
 		Global.diamonds = Global.diamonds + 1
 		area.queue_free()
+	if area.name == "Trofet":
+		get_tree().change_scene_to_file("res://2d_scen/winner_scene.tscn")

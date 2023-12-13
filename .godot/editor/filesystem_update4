@@ -16,3 +16,9 @@ res://Home.gd
 res://scenes/main_character.gd
 res://2d_scen/rigid_body_2d.tscn
 res://2d_scen/rigid_body_2d.gd
+res://Trofet.tscn
+res://Trofet.gd
+res://2d_scen/Trofet.tscn
+res://2d_scen/winner_scene.tscn
+res://2d_scen/winner_scene.gd
+res://scenes/main_character_In_Win_scene.gd
