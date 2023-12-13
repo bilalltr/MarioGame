@@ -19,8 +19,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://Global.gd"
-Singleton="*res://Singleton.gd"
 SoundPlayer="*res://sounds/sound_player.tscn"
+Singleton="*res://Singleton.gd"
 
 [display]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdbm6bvwg8cme"]
+[gd_scene load_steps=3 format=3 uid="uid://qeyodtq67kj7"]
 
 [ext_resource type="Texture2D" uid="uid://b57f85kvps6ke" path="res://mouche-removebg-preview.png" id="1_l52su"]
 
@@ -9,6 +9,7 @@ radius = 13.0384
 scale = Vector2(2, 2)
 
 [node name="TileBlue10" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(-0.269375, 0.41225)
 scale = Vector2(0.0610775, 0.078351)
 texture = ExtResource("1_l52su")

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddk8olgu372dr"]
+[gd_scene load_steps=6 format=3 uid="uid://bgorwd5i70vyn"]
 
-[ext_resource type="PackedScene" uid="uid://dfqr2cwwrsa3r" path="res://hitbox.tscn" id="2_yc5yv"]
+[ext_resource type="PackedScene" uid="uid://bijtnjhblj66c" path="res://hitbox.tscn" id="2_yc5yv"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dj7rq"]
 load_path = "res://.godot/imported/tile_0008.png-e21dfc85653b43dc31702d09bcfb5223.ctex"
