@@ -22,7 +22,7 @@ func _physics_process(delta):
 
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		SoundPlayer.play_sound(SoundPlayer.JUMP)
+		#SoundPlayer.play_sound(SoundPlayer.JUMP)
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
@@ -36,5 +36,3 @@ func _physics_process(delta):
 	move_and_slide()
 	var isLeft = velocity.x < 0 
 	sprite_2d.flip_h = isLeft
-
-

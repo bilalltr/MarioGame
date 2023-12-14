@@ -27,10 +27,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i2kur"]
-radius = 50.04
+radius = 25.318
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ih1nn"]
-radius = 50.0
+radius = 42.107
 
 [node name="Enimies" type="CharacterBody2D"]
 script = ExtResource("1_tuuj8")
@@ -43,7 +43,6 @@ sprite_frames = SubResource("SpriteFrames_kannm")
 animation = &"walking"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(10, -40)
 shape = SubResource("CircleShape2D_i2kur")
 

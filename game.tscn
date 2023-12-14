@@ -39,10 +39,10 @@ render_target_update_mode = 4
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="Node2D"]
-offset_left = 503.245
-offset_top = 453.875
-offset_right = 741.245
-offset_bottom = 511.875
+offset_left = 410.245
+offset_top = 567.875
+offset_right = 747.245
+offset_bottom = 625.875
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Node2D/HBoxContainer3"]
 layout_mode = 2

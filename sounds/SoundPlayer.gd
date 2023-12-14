@@ -4,6 +4,7 @@ const HURT = preload("res://Sounds/Hurt.wav")
 const JUMP = preload("res://Sounds/Jump.wav")
 const EAT = preload("res://Sounds/eat.wav")
 const FIN = preload("res://Sounds/fin.wav")
+const WIN = preload("res://sounds/victory.wav")
 
 @onready var audioPlayers = $AudioPlayers
 

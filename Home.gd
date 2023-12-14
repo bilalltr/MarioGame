@@ -20,3 +20,8 @@ func _on_play_pressed():
 func _on_exite_pressed():
 	print("Exit Button was PRESSED")
 	get_tree().quit()
+
+
+
+func _on_sounds_pressed():
+	Global.sound = 1

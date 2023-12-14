@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://2e4ucxf1wsj4"]
 
 [ext_resource type="Script" path="res://Home.gd" id="1_ld1fx"]
-[ext_resource type="Texture2D" uid="uid://celc46bleyird" path="res://backGround1.jpg" id="1_oqppf"]
+[ext_resource type="Texture2D" uid="uid://cqse6gkj51d1u" path="res://frog.jpeg" id="2_mplb6"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -13,10 +13,11 @@ grow_vertical = 2
 script = ExtResource("1_ld1fx")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
 layout_mode = 0
 offset_right = 1164.0
 offset_bottom = 676.0
-texture = ExtResource("1_oqppf")
+texture = ExtResource("2_mplb6")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -26,6 +27,7 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
+visible = false
 texture_filter = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
